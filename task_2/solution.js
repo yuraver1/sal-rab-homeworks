@@ -69,7 +69,7 @@ function calcInvoice({
     let shippingSum = calcShipping(totalSum, shippingFreeMinSum, shippingPrice);
     totalSum += shippingSum;
     let freeShipping;
-    freeShipping=!Boolean(shippingSum);
+    freeShipping=!shippingSum;
     return {discount: discountSum, freeShipping, shipping: shippingSum, total: totalSum};
     // создайте переменную totalSum
 
